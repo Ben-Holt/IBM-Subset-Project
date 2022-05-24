@@ -1,0 +1,38 @@
+
+behavioral simulation of S/360 subset
+
+(memory is limited to 4096 bytes in this simulation)
+(addresses, register values, and memory values are shown in hexadecimal)
+
+initial contents of memory arranged by bytes
+addr value
+000: 41
+001: 10
+002: 0f
+003: ff
+004: 47
+005: f0
+006: 10
+007: 01
+008: 00
+
+initial pc, condition code, and register values are all zero
+
+updated pc, condition code, and register values are shown after
+ each instruction has been executed
+
+LA instruction, operand 1 is R1, operand 2 at address 000fff
+instruction address = 000004, condition code = 0
+R0 = 00000000, R4 = 00000000, R8 = 00000000, RC = 00000000
+R1 = 00000fff, R5 = 00000000, R9 = 00000000, RD = 00000000
+R2 = 00000000, R6 = 00000000, RA = 00000000, RE = 00000000
+R3 = 00000000, R7 = 00000000, RB = 00000000, RF = 00000000
+
+BC instruction, mask is f, branch target is address 001000
+instruction address = 001000, condition code = 0
+R0 = 00000000, R4 = 00000000, R8 = 00000000, RC = 00000000
+R1 = 00000fff, R5 = 00000000, R9 = 00000000, RD = 00000000
+R2 = 00000000, R6 = 00000000, RA = 00000000, RE = 00000000
+R3 = 00000000, R7 = 00000000, RB = 00000000, RF = 00000000
+
+out of range instruction address 1000

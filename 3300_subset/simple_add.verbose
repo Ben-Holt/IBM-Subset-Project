@@ -1,0 +1,101 @@
+
+behavioral simulation of S/360 subset
+
+(memory is limited to 4096 bytes in this simulation)
+(addresses, register values, and memory values are shown in hexadecimal)
+
+initial contents of memory arranged by bytes
+addr value
+000: 58
+001: 40
+002: 00
+003: 10
+004: 58
+005: 50
+006: 00
+007: 14
+008: 1a
+009: 45
+00a: 50
+00b: 40
+00c: 00
+00d: 18
+00e: 00
+00f: 00
+010: 01
+011: 23
+012: 45
+013: 67
+014: 89
+015: ab
+016: cd
+017: ef
+018: 00
+019: 00
+01a: 00
+01b: 00
+
+initial pc, condition code, and register values are all zero
+
+updated pc, condition code, and register values are shown after
+ each instruction has been executed
+
+L instruction, operand 1 is R4, operand 2 at address 000010
+instruction address = 000004, condition code = 0
+R0 = 00000000, R4 = 01234567, R8 = 00000000, RC = 00000000
+R1 = 00000000, R5 = 00000000, R9 = 00000000, RD = 00000000
+R2 = 00000000, R6 = 00000000, RA = 00000000, RE = 00000000
+R3 = 00000000, R7 = 00000000, RB = 00000000, RF = 00000000
+
+L instruction, operand 1 is R5, operand 2 at address 000014
+instruction address = 000008, condition code = 0
+R0 = 00000000, R4 = 01234567, R8 = 00000000, RC = 00000000
+R1 = 00000000, R5 = 89abcdef, R9 = 00000000, RD = 00000000
+R2 = 00000000, R6 = 00000000, RA = 00000000, RE = 00000000
+R3 = 00000000, R7 = 00000000, RB = 00000000, RF = 00000000
+
+AR instruction, operand 1 is R4, operand 2 is R5
+instruction address = 00000a, condition code = 1
+R0 = 00000000, R4 = 8acf1356, R8 = 00000000, RC = 00000000
+R1 = 00000000, R5 = 89abcdef, R9 = 00000000, RD = 00000000
+R2 = 00000000, R6 = 00000000, RA = 00000000, RE = 00000000
+R3 = 00000000, R7 = 00000000, RB = 00000000, RF = 00000000
+
+ST instruction, operand 1 is R4, operand 2 at address 000018
+instruction address = 00000e, condition code = 1
+R0 = 00000000, R4 = 8acf1356, R8 = 00000000, RC = 00000000
+R1 = 00000000, R5 = 89abcdef, R9 = 00000000, RD = 00000000
+R2 = 00000000, R6 = 00000000, RA = 00000000, RE = 00000000
+R3 = 00000000, R7 = 00000000, RB = 00000000, RF = 00000000
+
+Halt encountered
+instruction address = 000010, condition code = 1
+R0 = 00000000, R4 = 8acf1356, R8 = 00000000, RC = 00000000
+R1 = 00000000, R5 = 89abcdef, R9 = 00000000, RD = 00000000
+R2 = 00000000, R6 = 00000000, RA = 00000000, RE = 00000000
+R3 = 00000000, R7 = 00000000, RB = 00000000, RF = 00000000
+
+final contents of memory arranged by words
+addr value
+000: 58400010
+004: 58500014
+008: 1a455040
+00c: 00180000
+010: 01234567
+014: 89abcdef
+018: 8acf1356
+
+execution statistics
+  instruction fetches = 4
+    LR  instructions  = 0
+    CR  instructions  = 0
+    AR  instructions  = 1
+    SR  instructions  = 0
+    LA  instructions  = 0
+    BCT instructions  = 0
+    BC  instructions  = 0
+    ST  instructions  = 1
+    L   instructions  = 2
+    C   instructions  = 0
+  memory data reads   = 2
+  memory data writes  = 1

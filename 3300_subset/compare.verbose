@@ -1,0 +1,131 @@
+
+behavioral simulation of S/360 subset
+
+(memory is limited to 4096 bytes in this simulation)
+(addresses, register values, and memory values are shown in hexadecimal)
+
+initial contents of memory arranged by bytes
+addr value
+000: 41
+001: 90
+002: 00
+003: 55
+004: 18
+005: 89
+006: 18
+007: a9
+008: 41
+009: b0
+00a: 00
+00b: 10
+00c: 1b
+00d: 8b
+00e: 1a
+00f: ab
+010: 19
+011: 89
+012: 19
+013: 99
+014: 19
+015: a9
+016: 00
+017: 00
+
+initial pc, condition code, and register values are all zero
+
+updated pc, condition code, and register values are shown after
+ each instruction has been executed
+
+LA instruction, operand 1 is R9, operand 2 at address 000055
+instruction address = 000004, condition code = 0
+R0 = 00000000, R4 = 00000000, R8 = 00000000, RC = 00000000
+R1 = 00000000, R5 = 00000000, R9 = 00000055, RD = 00000000
+R2 = 00000000, R6 = 00000000, RA = 00000000, RE = 00000000
+R3 = 00000000, R7 = 00000000, RB = 00000000, RF = 00000000
+
+LR instruction, operand 1 is R8, operand 2 is R9
+instruction address = 000006, condition code = 0
+R0 = 00000000, R4 = 00000000, R8 = 00000055, RC = 00000000
+R1 = 00000000, R5 = 00000000, R9 = 00000055, RD = 00000000
+R2 = 00000000, R6 = 00000000, RA = 00000000, RE = 00000000
+R3 = 00000000, R7 = 00000000, RB = 00000000, RF = 00000000
+
+LR instruction, operand 1 is Ra, operand 2 is R9
+instruction address = 000008, condition code = 0
+R0 = 00000000, R4 = 00000000, R8 = 00000055, RC = 00000000
+R1 = 00000000, R5 = 00000000, R9 = 00000055, RD = 00000000
+R2 = 00000000, R6 = 00000000, RA = 00000055, RE = 00000000
+R3 = 00000000, R7 = 00000000, RB = 00000000, RF = 00000000
+
+LA instruction, operand 1 is Rb, operand 2 at address 000010
+instruction address = 00000c, condition code = 0
+R0 = 00000000, R4 = 00000000, R8 = 00000055, RC = 00000000
+R1 = 00000000, R5 = 00000000, R9 = 00000055, RD = 00000000
+R2 = 00000000, R6 = 00000000, RA = 00000055, RE = 00000000
+R3 = 00000000, R7 = 00000000, RB = 00000010, RF = 00000000
+
+SR instruction, operand 1 is R8, operand 2 is Rb
+instruction address = 00000e, condition code = 2
+R0 = 00000000, R4 = 00000000, R8 = 00000045, RC = 00000000
+R1 = 00000000, R5 = 00000000, R9 = 00000055, RD = 00000000
+R2 = 00000000, R6 = 00000000, RA = 00000055, RE = 00000000
+R3 = 00000000, R7 = 00000000, RB = 00000010, RF = 00000000
+
+AR instruction, operand 1 is Ra, operand 2 is Rb
+instruction address = 000010, condition code = 2
+R0 = 00000000, R4 = 00000000, R8 = 00000045, RC = 00000000
+R1 = 00000000, R5 = 00000000, R9 = 00000055, RD = 00000000
+R2 = 00000000, R6 = 00000000, RA = 00000065, RE = 00000000
+R3 = 00000000, R7 = 00000000, RB = 00000010, RF = 00000000
+
+CR instruction, operand 1 is R8, operand 2 is R9
+instruction address = 000012, condition code = 1
+R0 = 00000000, R4 = 00000000, R8 = 00000045, RC = 00000000
+R1 = 00000000, R5 = 00000000, R9 = 00000055, RD = 00000000
+R2 = 00000000, R6 = 00000000, RA = 00000065, RE = 00000000
+R3 = 00000000, R7 = 00000000, RB = 00000010, RF = 00000000
+
+CR instruction, operand 1 is R9, operand 2 is R9
+instruction address = 000014, condition code = 0
+R0 = 00000000, R4 = 00000000, R8 = 00000045, RC = 00000000
+R1 = 00000000, R5 = 00000000, R9 = 00000055, RD = 00000000
+R2 = 00000000, R6 = 00000000, RA = 00000065, RE = 00000000
+R3 = 00000000, R7 = 00000000, RB = 00000010, RF = 00000000
+
+CR instruction, operand 1 is Ra, operand 2 is R9
+instruction address = 000016, condition code = 2
+R0 = 00000000, R4 = 00000000, R8 = 00000045, RC = 00000000
+R1 = 00000000, R5 = 00000000, R9 = 00000055, RD = 00000000
+R2 = 00000000, R6 = 00000000, RA = 00000065, RE = 00000000
+R3 = 00000000, R7 = 00000000, RB = 00000010, RF = 00000000
+
+Halt encountered
+instruction address = 000018, condition code = 2
+R0 = 00000000, R4 = 00000000, R8 = 00000045, RC = 00000000
+R1 = 00000000, R5 = 00000000, R9 = 00000055, RD = 00000000
+R2 = 00000000, R6 = 00000000, RA = 00000065, RE = 00000000
+R3 = 00000000, R7 = 00000000, RB = 00000010, RF = 00000000
+
+final contents of memory arranged by words
+addr value
+000: 41900055
+004: 188918a9
+008: 41b00010
+00c: 1b8b1aab
+010: 19891999
+014: 19a90000
+
+execution statistics
+  instruction fetches = 9
+    LR  instructions  = 2
+    CR  instructions  = 3
+    AR  instructions  = 1
+    SR  instructions  = 1
+    LA  instructions  = 2
+    BCT instructions  = 0
+    BC  instructions  = 0
+    ST  instructions  = 0
+    L   instructions  = 0
+    C   instructions  = 0
+  memory data reads   = 0
+  memory data writes  = 0

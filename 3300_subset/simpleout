@@ -1,0 +1,17 @@
+
+behavioral simulation of S/360 subset
+
+execution statistics
+  instruction fetches = 19
+    LR  instructions  = 0
+    CR  instructions  = 0
+    AR  instructions  = 9
+    SR  instructions  = 3
+    LA  instructions  = 1
+    BCT instructions  = 3, taken = 2 (66.7%)
+    BC  instructions  = 0
+    ST  instructions  = 3
+    L   instructions  = 0
+    C   instructions  = 0
+  memory data reads   = 0
+  memory data writes  = 3
